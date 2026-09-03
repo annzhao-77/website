@@ -22,7 +22,7 @@ Welcome to my personal website.
   <a href="https://github.com/annzhao-77"><i class="bi bi-github fs-3"></i></a>
   <a href="https://linkedin.com/in/mengqi-z"><i class="bi bi-linkedin fs-3"></i></a>
   <a href="resume.qmd"><i class="bi bi-file-earmark-person-fill fs-3"></i></a>
-  <a href="annzhao@sas.upenn.com"><i class="bi bi-envelope-fill fs-3"></i></a>
+  <a href="mailto:annzhao@sas.upenn.com"><i class="bi bi-envelope-fill fs-3"></i></a>
 </div>
 :::
 :::::
