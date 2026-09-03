@@ -4,7 +4,7 @@ title: ""
 
 ::::: columns
 ::: {.column width="40%"}
-![](images/annzhao.png){width="100%"}
+![](images/annzhao.png){width="80%"}
 :::
 
 ::: {.column width="60%"}
