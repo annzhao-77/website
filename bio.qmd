@@ -6,10 +6,12 @@ I am a graduate student pursuing a Master of Applied Economics and Data Science 
 
 ## Education
 
-#University of Pennsylvania
+# University of Pennsylvania
+
 Master of Applied Economics and Data Science, expected December 2027
 
-#Boston University
+# Boston University
+
 Bachelor of Arts in Economics, cum laude, May 2026
 
 
@@ -25,7 +27,7 @@ Bachelor of Arts in Economics, cum laude, May 2026
 
 -   Data-driven strategy and decision-making
 
-##Technical Skills
+## Technical Skills
 
 -   Programming: Python, SQL, and R
 
@@ -35,14 +37,14 @@ Bachelor of Arts in Economics, cum laude, May 2026
 
 -   Languages: Mandarin Chinese (native) and English (professional proficiency)
 
-##Career Goals
+## Career Goals
 
 My goal is to pursue a career as a financial research analyst, business analyst, or data analyst. I am particularly interested in roles where I can combine economic reasoning, quantitative analysis, and industry research to identify meaningful patterns, evaluate market or business performance, and support evidence-based decision-making.
 
 ## Contact
 
-# annzhao@sas.upenn.edu
+annzhao@sas.upenn.edu
 
-# +1 8572962831
++1 8572962831
 
 ------------------------------------------------------------------------

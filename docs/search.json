@@ -18,7 +18,7 @@
     "href": "bio.html#education",
     "title": "About Me",
     "section": "Education",
-    "text": "Education\n#University of Pennsylvania Master of Applied Economics and Data Science, expected December 2027\n#Boston University Bachelor of Arts in Economics, cum laude, May 2026"
+    "text": "Education"
   },
   {
     "objectID": "bio.html#interests",
@@ -32,7 +32,7 @@
     "href": "bio.html#contact",
     "title": "About Me",
     "section": "Contact",
-    "text": "Contact"
+    "text": "Contact\nannzhao@sas.upenn.edu\n+1 8572962831"
   },
   {
     "objectID": "bio.html#studentemail.edu",
@@ -81,6 +81,20 @@
     "href": "bio.html#professional-interests",
     "title": "About Me",
     "section": "Professional Interests",
-    "text": "Professional Interests\n\nFinancial and economic research\nBusiness and product analytics\nEconometrics and applied economic analysis\nMachine learning and predictive modeling\nData-driven strategy and decision-making\n\n##Technical Skills\n\nProgramming: Python, SQL, and R\nData Analysis: Econometrics, statistical modeling, machine learning, customer segmentation, and forecasting\nVisualization and Business Tools: Tableau, Excel, PowerPoint, and Wind\nLanguages: Mandarin Chinese (native) and English (professional proficiency)\n\n##Career Goals\nMy goal is to pursue a career as a financial research analyst, business analyst, or data analyst. I am particularly interested in roles where I can combine economic reasoning, quantitative analysis, and industry research to identify meaningful patterns, evaluate market or business performance, and support evidence-based decision-making."
+    "text": "Professional Interests\n\nFinancial and economic research\nBusiness and product analytics\nEconometrics and applied economic analysis\nMachine learning and predictive modeling\nData-driven strategy and decision-making"
+  },
+  {
+    "objectID": "bio.html#technical-skills",
+    "href": "bio.html#technical-skills",
+    "title": "About Me",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nProgramming: Python, SQL, and R\nData Analysis: Econometrics, statistical modeling, machine learning, customer segmentation, and forecasting\nVisualization and Business Tools: Tableau, Excel, PowerPoint, and Wind\nLanguages: Mandarin Chinese (native) and English (professional proficiency)"
+  },
+  {
+    "objectID": "bio.html#career-goals",
+    "href": "bio.html#career-goals",
+    "title": "About Me",
+    "section": "Career Goals",
+    "text": "Career Goals\nMy goal is to pursue a career as a financial research analyst, business analyst, or data analyst. I am particularly interested in roles where I can combine economic reasoning, quantitative analysis, and industry research to identify meaningful patterns, evaluate market or business performance, and support evidence-based decision-making."
   }
 ]
