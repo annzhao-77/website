@@ -10,7 +10,7 @@ title: ""
 ::: {.column width="65%"}
 ![](images/UniversityofPennsylvania_FullLogo_RGB.png){width="250px"}
 
-# Student Name
+# Anna(Mengqi) Zhao
 
 University of Pennsylvaina
 
