@@ -11,14 +11,14 @@
     "href": "bio.html",
     "title": "About Me",
     "section": "",
-    "text": "Write a short biography here.\nInclude:"
+    "text": "I am a graduate student pursuing a Master of Applied Economics and Data Science at the University of Pennsylvania, with an expected graduation date of December 2027. I earned my Bachelor of Arts in Economics, cum laude, from Boston University in May 2026. My academic and professional interests lie at the intersection of economics, finance, and data analytics. Through internships in business analytics, energy market research, banking, and securities research, I have gained experience applying quantitative methods to real-world business and financial questions."
   },
   {
     "objectID": "bio.html#education",
     "href": "bio.html#education",
     "title": "About Me",
     "section": "Education",
-    "text": "Education\nMaster of Applied Economics and Data Science, University of Pennsylvania (expaceted 2027) Batelor of Science, University Name 2026"
+    "text": "Education\n#University of Pennsylvania Master of Applied Economics and Data Science, expected December 2027\n#Boston University Bachelor of Arts in Economics, cum laude, May 2026"
   },
   {
     "objectID": "bio.html#interests",
@@ -75,5 +75,12 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "bio.html#professional-interests",
+    "href": "bio.html#professional-interests",
+    "title": "About Me",
+    "section": "Professional Interests",
+    "text": "Professional Interests\n\nFinancial and economic research\nBusiness and product analytics\nEconometrics and applied economic analysis\nMachine learning and predictive modeling\nData-driven strategy and decision-making\n\n##Technical Skills\n\nProgramming: Python, SQL, and R\nData Analysis: Econometrics, statistical modeling, machine learning, customer segmentation, and forecasting\nVisualization and Business Tools: Tableau, Excel, PowerPoint, and Wind\nLanguages: Mandarin Chinese (native) and English (professional proficiency)\n\n##Career Goals\nMy goal is to pursue a career as a financial research analyst, business analyst, or data analyst. I am particularly interested in roles where I can combine economic reasoning, quantitative analysis, and industry research to identify meaningful patterns, evaluate market or business performance, and support evidence-based decision-making."
   }
 ]
