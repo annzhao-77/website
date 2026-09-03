@@ -3,7 +3,7 @@ title: ""
 ---
 
 ::::: columns
-::: {.column width="%"40}
+::: {.column width="40%"}
 ![](images/annzhao.png){width="100%"}
 :::
 
