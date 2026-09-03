@@ -3,11 +3,11 @@ title: ""
 ---
 
 ::::: columns
-::: {.column width="35%"}
-![](images/profile.png){width="100%"}
+::: {.column width="%"40}
+![](images/annzhao.png){width="100%"}
 :::
 
-::: {.column width="65%"}
+::: {.column width="60%"}
 ![](images/UniversityofPennsylvania_FullLogo_RGB.png){width="250px"}
 
 # Anna Zhao
