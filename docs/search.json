@@ -1,10 +1,24 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Anna Zhao",
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
     "section": "",
-    "text": "Anna Zhao\nUniversity of Pennsylvania\nWelcome to my personal website.\n\nQuick Links"
+    "text": "Download my resume here:\nResume PDF"
+  },
+  {
+    "objectID": "blog/posts/simpsons-paradox/index.html",
+    "href": "blog/posts/simpsons-paradox/index.html",
+    "title": "Meet the Other Simpson",
+    "section": "",
+    "text": "How winning in every group can still mean losing overall\nAnna Zhao\n\n2026-09-13\n\n\n\nStatistics in everyday lifeMeet the Other SimpsonHow winning in every group can still mean losing overall.Anna Zhao   /   600 words of main text   /   4 min read+Have you ever watched The Simpsons? Then here is another Simpson worth meeting: Simpson's paradox. The shared name makes a fun introduction, but this statistical idea has nothing to do with Springfield. It describes a surprising reversal: a pattern appears in every subgroup, yet points the opposite way when those groups are combined. How can both stories be true?1. Two hitters, one surprising scoreboardConsider the baseball example featured on MyPointIs: Derek Jeter and David Justice in 1995 and 1996. A batting average is hits divided by at-bats, the batting opportunities counted in this statistic. Justice leads in both seasons: 25.3% versus 25.0%, then 32.1% versus 31.4%. Who would you expect to lead across both years?\n\n1995-1996 records. Cells show hits / at-bats and percentages.\n\n\nPeriod\nDerek Jeter\nDavid Justice\n\n\n\n\n1995\n12/48 25.0%\n104/411 25.3%\n\n\n1996\n183/582 31.4%\n45/140 32.1%\n\n\nOverall\n195/630 31%\n149/551 27%\n\n\n\nJeter wins the combined comparison: 195 hits from 630 at-bats, or 31.0%, against Justice's 149 from 551, or 27.0%. About 92% of Jeter's opportunities came in 1996, when both players had higher averages. Only about 25% of Justice's came that year. Their combined averages therefore give very different importance to each season.\nBatting success by season and overall\nThe second series leads in both subgroups, but the first leads overall. Exact values appear in the adjacent table.\n\n\nDerek Jeter\nDavid Justice\n0%\n10%\n20%\n30%\n40%\n1995\n25%\n25.3%\n1996\n31.4%\n32.1%\nOverall\n31%\n27%\nJustice leads in each season; Jeter leads overall. Every bar starts at zero. MyPointIs example; data.2. When the patient mix changes the winnerThe same reversal appears in published research. A 1986 study by Charig and colleagues compared kidney-stone treatments. Here we focus on open surgery (A) and percutaneous nephrolithotomy (B), which removes stones through a small opening. Success meant eliminating stones or reducing them below two millimetres after three months.\n\nSuccesses / patients and success rates. Small stones: under 2 cm; large: 2 cm or more. A = open surgery; B = percutaneous nephrolithotomy.\n\n\nStone size\nTreatment B\nTreatment A\n\n\n\n\nSmall stones\n234/270 86.7%\n81/87 93.1%\n\n\nLarge stones\n55/80 68.8%\n192/263 73.0%\n\n\nOverall\n289/350 82.6%\n273/350 78.0%\n\n\n\nOverall, B succeeded in 82.6% of cases, compared with 78.0% for A. Yet A had higher success rates within both stone-size groups: 93.1% versus 86.7% for small stones, and 73.0% versus 68.8% for large stones. The winner changes when we combine the groups, just as it did with the baseball players.\nWhy? Large stones accounted for 263 of A's 350 cases, but only 80 of B's 350. Success was less common for large stones under either treatment. A therefore faced a much heavier concentration of difficult cases. The overall comparison mixes treatment outcomes with differences in the patients being treated.\nTreatment success by stone size and overall\nThe second series leads in both subgroups, but the first leads overall. Exact values appear in the adjacent table.\n\n\nTreatment B\nTreatment A\n0%\n25%\n50%\n75%\n100%\nSmall stones\n86.7%\n93.1%\nLarge stones\n68.8%\n73%\nOverall\n82.6%\n78%\nA leads in both size groups; B leads overall. Charig et al. (1986); subgroup analysis.The hidden ingredient: weightsBoth reversals come from weighted averages. In the formula, g labels a subgroup, r is its success rate, and w is its share of the relevant total. The weights add to one. Each player or treatment has its own weights, reflecting its particular mix of opportunities or cases. An overall result answers what happened in the observed mix; a standardized comparison asks what the rates would look like with the same mix. Both need a clearly stated purpose.Overall rate = ∑g wg × rg∑g wg = 1For treatment A, multiply 81/87 by 87/350, then add 192/263 times 263/350. This gives 273/350, or 78%. Simply averaging the two subgroup percentages would wrongly give small and large stones equal weight. In baseball, the corresponding weights are each season's share of a player's total at-bats.Where this mattersThis matters when interpreting everyday comparisons. In education, school pass rates can reflect differences in students' prior preparation. In business, campaign conversion rates can reflect whether audiences contain mostly returning customers or newcomers. Comparing relevant subgroups and showing their sizes helps readers see what an overall average actually combines.\nIn research, the practical application is to examine group composition before interpreting a headline result. Researchers can also compare outcomes using a common set of weights, making the target population explicit. But subgroup comparisons alone do not establish causation: the kidney-stone comparison was historical and nonrandomized, so other differences could still matter.Before believing the headlineThe lesson is not to distrust every average or split data endlessly. Choosing useful groups requires understanding the question and when variables were measured. Adjusting for consequences of an intervention can itself introduce bias. Next time a headline offers one impressive number, ask: who is inside it, and who contributes most? Simpson's paradox reminds us that correct numbers can still tell an incomplete story.Source and data note. Conceptual reference: Econometrics I, Week 2, Section 2.14, pp. 20-21. Baseball example: Rachel, MyPointIs (2023), with counts checked against Illustrative Mathematics. Kidney-stone research: Charig et al., BMJ (1986), doi:10.1136/bmj.292.6524.879; subgroup analysis: Julious & Mullee, BMJ (1994), doi:10.1136/bmj.309.6967.1480. Percentages are recalculated from counts (234/270 = 86.7%). This is a historical illustration, not current treatment advice. Education and business applications describe possibilities, not specific studies. Main-text word count excludes headings, tables, captions, formula, and this note."
+  },
+  {
+    "objectID": "blog/posts/post1/Untitled.html",
+    "href": "blog/posts/post1/Untitled.html",
+    "title": "Meet the other Simpson–The Simpson’s Paradox",
+    "section": "",
+    "text": "This is my first blog post. Example \\(\\LaTeX\\) equation: \\(\\frac{1}{2}\\sum_{i=1}^nx_i\\)\nHave you ever watched The Simpsons? One of the most famous cartoon in U.S. I love the ironic plots and lovely characters in it. However,here is another Simpson worth meeting: Simpson’s paradox. The shared name makes a fun introduction, but this statistical idea has nothing to do with Springfield. It describes a surprising reversal: a pattern appears in every subgroup, may be opposite with the conclusion that came up with all the groups combined. How can both stories be true?\nConsider the baseball example: Derek Jeter and David Justice in 1995 and 1996. A batting average is hits divided by at-bats, the batting opportunities counted in this statistic. Justice leads in both seasons: 25.3% versus 25.0%, then 32.1% versus 31.4%. Who would you expect to lead across both years?\n\n\n\nHits / at-bats and batting percentages\n\n\nPeriod\nDerek Jeter\nDavid Justice\n\n\n\n\n1995\n12/48 (25.0%)\n104/411 (25.3%)\n\n\n1996\n183/582 (31.4%)\n45/140 (32.1%)\n\n\nCombined\n195/630 (31.0%)\n149/551 (27.0%)\n\n\n\n\n\nJeter wins the combined comparison: 195 hits from 630 at-bats, or 31.0%, against Justice’s 149 from 551, or 27.0%. About 92% of Jeter’s opportunities came in 1996, when both players had higher averages. Only about 25% of Justice’s came that year. Their combined averages therefore give very different importance to each season.\n 31b8e172-b470-440e-83d8-e6b185028602:dAB5AHAAZQA6AFoAUQBBAHgAQQBEAGcAQQBNAFEAQQA1AEEARABZAEEATQBBAEEAMQBBAEMAMABBAE0AQQBCAGgAQQBHAE0AQQBaAEEAQQB0AEEARABRAEEAWgBnAEIAaABBAEcAVQBBAEwAUQBBADQAQQBHAEkAQQBPAFEAQQA1AEEAQwAwAEEATwBRAEIAagBBAEQARQBBAFkAZwBBADMAQQBHAEkAQQBaAEEAQQAzAEEARwBNAEEATQBBAEIAbQBBAEQARQBBAAoAcABvAHMAaQB0AGkAbwBuADoATQBRAEEANABBAEQAZwBBAE0AQQBBAD0ACgBwAHIAZQBmAGkAeAA6AAoAcwBvAHUAcgBjAGUAOgBMAFEAQQB0AEEAQwAwAEEAQwBnAEIAegBBAEgAVQBBAFkAZwBCADAAQQBHAGsAQQBkAEEAQgBzAEEARwBVAEEATwBnAEEAZwBBAEMASQBBAE0AZwBBAHUAQQBDAEEAQQBWAHcAQgBvAEEARwBVAEEAYgBnAEEAZwBBAEgAUQBBAGEAQQBCAGwAQQBDAEEAQQBjAEEAQgBoAEEASABRAEEAYQBRAEIAbABBAEcANABBAGQAQQBBAGcAQQBHADAAQQBhAFEAQgA0AEEAQwBBAEEAWQB3AEIAbwBBAEcARQBBAGIAZwBCAG4AQQBHAFUAQQBjAHcAQQBnAEEASABRAEEAYQBBAEIAbABBAEMAQQBBAGQAdwBCAHAAQQBHADQAQQBiAGcAQgBsAEEASABJAEEASQBnAEEASwBBAEMAMABBAEwAUQBBAHQAQQBBAD0APQAKAHMAdQBmAGYAaQB4ADoA:31b8e172-b470-440e-83d8-e6b185028602\nThe same reversal appears in published research. A 1986 study by Charig and colleagues compared kidney-stone treatments. Here we focus on open surgery (A) and percutaneous nephrolithotomy (B), which removes stones through a small opening. Success meant eliminating stones or reducing them below two millimetres after three months.\n\nSuccesses / patients and success rates. Small stones: under 2 cm; large: 2 cm or more. A = open surgery; B = percutaneous nephrolithotomy.\n\n\n\n\nStone size\nTreatment B\nTreatment A\n\n\n\n\nSmall stones\n234/270 (86.7%)\n81/87 (93.1%)\n\n\nLarge stones\n55/80 (68.8%)\n192/263 (73.0%)\n\n\nOverall\n289/350 (82.6%)\n273/350 (78.0%)\n\n\n\nOverall, B succeeded in 82.6% of cases, compared with 78.0% for A. Yet A had higher success rates within both stone-size groups: 93.1% versus 86.7% for small stones, and 73.0% versus 68.8% for large stones. The winner changes when we combine the groups, just as it did with the baseball players.\nWhy? Large stones accounted for 263 of A’s 350 cases, but only 80 of B’s 350. Success was less common for large stones under either treatment. A therefore faced a much heavier concentration of difficult cases. The overall comparison mixes treatment outcomes with differences in the patients being treated.\nsubtitile: “The hidden ingredient: weights” Both reversals come from weighted averages. In the formula, g labels a subgroup, r is its success rate, and w is its share of the relevant total. The weights add to one. Each player or treatment has its own weights, reflecting its particular mix of opportunities or cases. An overall result answers what happened in the observed mix; a standardized comparison asks what the rates would look like with the same mix. Both need a clearly stated purpose.\n\\[\\text{Overall rate}\n= \\sum_{g=1}^{G} w_g r_g,\n\\qquad\n\\sum_{g=1}^{G} w_g = 1\\]\n\nsubtitile: “Why this Matter?” This matters when interpreting everyday comparisons. In education, school pass rates can reflect differences in students’ prior preparation. In business, campaign conversion rates can reflect whether audiences contain mostly returning customers or newcomers. Comparing relevant subgroups and showing their sizes helps readers see what an overall average actually combines.\nIn research, the practical application is to examine group composition before interpreting a headline result. Researchers can also compare outcomes using a common set of weights, making the target population explicit. But subgroup comparisons alone do not establish causation: the kidney-stone comparison was historical and nonrandomized, so other differences could still matter.\nThe lesson is not to distrust every average or split data endlessly. Choosing useful groups requires understanding the question and when variables were measured. Adjusting for consequences of an intervention can itself introduce bias. Next time a headline offers one impressive number, ask: who is inside it, and who contributes most? Simpson’s paradox reminds us that correct numbers can still tell an incomplete story."
   },
   {
     "objectID": "bio.html",
@@ -18,63 +32,7 @@
     "href": "bio.html#education",
     "title": "About Me",
     "section": "Education",
-    "text": "Education\n\nUniversity of Pennsylvania\nMaster of Applied Economics and Data Science, expected December 2027\n\n\nBoston University\nBachelor of Arts in Economics, cum laude, May 2026"
-  },
-  {
-    "objectID": "bio.html#interests",
-    "href": "bio.html#interests",
-    "title": "About Me",
-    "section": "Interests",
-    "text": "Interests\n\nEconometrics\nMachine Learning\nData Analysis"
-  },
-  {
-    "objectID": "bio.html#contact",
-    "href": "bio.html#contact",
-    "title": "About Me",
-    "section": "Contact",
-    "text": "Contact\nannzhao@sas.upenn.edu\n+1 8572962831"
-  },
-  {
-    "objectID": "bio.html#studentemail.edu",
-    "href": "bio.html#studentemail.edu",
-    "title": "About Me",
-    "section": "student@email.edu",
-    "text": "student@email.edu"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "My First Blog Post\n\n\n\n\n\n\n\n\nJun 16, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMy Second Blog Post\n\n\n\n\n\n\n\n\nJun 16, 2026\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "blog/posts/post1/Untitled.html",
-    "href": "blog/posts/post1/Untitled.html",
-    "title": "My First Blog Post",
-    "section": "",
-    "text": "This is my first blog post. Example \\(\\LaTeX\\) equation: \\(\\frac{1}{2}\\sum_{i=1}^nx_i\\)"
-  },
-  {
-    "objectID": "resume.html",
-    "href": "resume.html",
-    "title": "Resume",
-    "section": "",
-    "text": "Download my resume here:\nResume PDF"
-  },
-  {
-    "objectID": "resume.html#resume-pdf",
-    "href": "resume.html#resume-pdf",
-    "title": "Resume",
-    "section": "Resume PDF",
-    "text": "Resume PDF"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Education\nUniversity of Pennsylvania\nMaster of Applied Economics and Data Science, expected December 2027\nBoston University\nBachelor of Arts in Economics, cum laude, May 2026"
   },
   {
     "objectID": "bio.html#professional-interests",
@@ -96,5 +54,33 @@
     "title": "About Me",
     "section": "Career Goals",
     "text": "Career Goals\nMy goal is to pursue a career as a financial research analyst, business analyst, or data analyst. I am particularly interested in roles where I can combine economic reasoning, quantitative analysis, and industry research to identify meaningful patterns, evaluate market or business performance, and support evidence-based decision-making."
+  },
+  {
+    "objectID": "bio.html#contact",
+    "href": "bio.html#contact",
+    "title": "About Me",
+    "section": "Contact",
+    "text": "Contact\nannzhao@sas.upenn.edu\n+1 8572962831"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Meet the other Simpson–The Simpson’s Paradox\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMeet the Other Simpson\n\n\nHow winning in every group can still mean losing overall\n\n\nSimpson’s paradox explained through baseball, kidney-stone research, and everyday applications.\n\n\n\n\n\nSep 13, 2026\n\n\nAnna Zhao\n\n\n\n\n\n\n\n\n\n\n\n\nMy Second Blog Post\n\n\n\n\n\n\n\n\n\n\n\nJun 16, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Anna Zhao",
+    "section": "",
+    "text": "Anna Zhao\nUniversity of Pennsylvania\nWelcome to my personal website.\n\nQuick Links"
   }
 ]

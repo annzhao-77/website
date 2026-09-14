@@ -97,8 +97,7 @@ $$\text{Overall rate}
 
 ------------------------------------------------------------------------
 
-## Where this matters
-
+subtitile: "Why this Matter?"
 This matters when interpreting everyday comparisons. In education, school pass rates can reflect differences in students' prior preparation. In business, campaign conversion rates can reflect whether audiences contain mostly returning customers or newcomers. Comparing relevant subgroups and showing their sizes helps readers see what an overall average actually combines.
 
 In research, the practical application is to examine group composition before interpreting a headline result. Researchers can also compare outcomes using a common set of weights, making the target population explicit. But subgroup comparisons alone do not establish causation: the kidney-stone comparison was historical and nonrandomized, so other differences could still matter.
