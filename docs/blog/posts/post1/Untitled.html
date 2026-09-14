@@ -156,7 +156,6 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Meet the other Simpson–The Simpson’s Paradox</h1>
-<p class="subtitle lead">1. Two hitters, one surprising scoreboard</p>
   <div class="quarto-categories">
     <div class="quarto-category">personal</div>
     <div class="quarto-category">statistics</div>
@@ -185,8 +184,9 @@ window.Quarto = {
 
 
 <p><img src="simpsons.png" class="img-fluid" width="500"></p>
-<p>This is my first blog post. Example <span class="math inline">\(\LaTeX\)</span> equation: <span class="math inline">\(\frac{1}{2}\sum_{i=1}^nx_i\)</span></p>
 <p>Have you ever watched The Simpsons? One of the most famous cartoon in U.S. I love the ironic plots and lovely characters in it. However,here is another Simpson worth meeting: Simpson’s paradox. The shared name makes a fun introduction, but this statistical idea has nothing to do with Springfield. It describes a surprising reversal: a pattern appears in every subgroup, may be opposite with the conclusion that came up with all the groups combined. How can both stories be true?</p>
+<section id="two-hitters-one-surprising-scoreboard" class="level2">
+<h2 class="anchored" data-anchor-id="two-hitters-one-surprising-scoreboard">Two hitters, one surprising scoreboard</h2>
 <p>Consider the baseball example: Derek Jeter and David Justice in 1995 and 1996. A batting average is hits divided by at-bats, the batting opportunities counted in this statistic. Justice leads in both seasons: 25.3% versus 25.0%, then 32.1% versus 31.4%. Who would you expect to lead across both years?</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -220,7 +220,10 @@ window.Quarto = {
 </div>
 </div>
 <p>Jeter wins the combined comparison: 195 hits from 630 at-bats, or 31.0%, against Justice’s 149 from 551, or 27.0%. About 92% of Jeter’s opportunities came in 1996, when both players had higher averages. Only about 25% of Justice’s came that year. Their combined averages therefore give very different importance to each season.</p>
-<p><img src="baseball.png" class="img-fluid" width="500"> 31b8e172-b470-440e-83d8-e6b185028602:dAB5AHAAZQA6AFoAUQBBAHgAQQBEAGcAQQBNAFEAQQA1AEEARABZAEEATQBBAEEAMQBBAEMAMABBAE0AQQBCAGgAQQBHAE0AQQBaAEEAQQB0AEEARABRAEEAWgBnAEIAaABBAEcAVQBBAEwAUQBBADQAQQBHAEkAQQBPAFEAQQA1AEEAQwAwAEEATwBRAEIAagBBAEQARQBBAFkAZwBBADMAQQBHAEkAQQBaAEEAQQAzAEEARwBNAEEATQBBAEIAbQBBAEQARQBBAAoAcABvAHMAaQB0AGkAbwBuADoATQBRAEEANABBAEQAZwBBAE0AQQBBAD0ACgBwAHIAZQBmAGkAeAA6AAoAcwBvAHUAcgBjAGUAOgBMAFEAQQB0AEEAQwAwAEEAQwBnAEIAegBBAEgAVQBBAFkAZwBCADAAQQBHAGsAQQBkAEEAQgBzAEEARwBVAEEATwBnAEEAZwBBAEMASQBBAE0AZwBBAHUAQQBDAEEAQQBWAHcAQgBvAEEARwBVAEEAYgBnAEEAZwBBAEgAUQBBAGEAQQBCAGwAQQBDAEEAQQBjAEEAQgBoAEEASABRAEEAYQBRAEIAbABBAEcANABBAGQAQQBBAGcAQQBHADAAQQBhAFEAQgA0AEEAQwBBAEEAWQB3AEIAbwBBAEcARQBBAGIAZwBCAG4AQQBHAFUAQQBjAHcAQQBnAEEASABRAEEAYQBBAEIAbABBAEMAQQBBAGQAdwBCAHAAQQBHADQAQQBiAGcAQgBsAEEASABJAEEASQBnAEEASwBBAEMAMABBAEwAUQBBAHQAQQBBAD0APQAKAHMAdQBmAGYAaQB4ADoA:31b8e172-b470-440e-83d8-e6b185028602</p>
+<p><img src="baseball.png" class="img-fluid" width="500"></p>
+</section>
+<section id="kidney-stone-research-example" class="level2">
+<h2 class="anchored" data-anchor-id="kidney-stone-research-example">Kidney-stone research example</h2>
 <p>The same reversal appears in published research. A 1986 study by Charig and colleagues compared kidney-stone treatments. Here we focus on open surgery (A) and percutaneous nephrolithotomy (B), which removes stones through a small opening. Success meant eliminating stones or reducing them below two millimetres after three months.</p>
 <p style="font-size: 0.9em; color: #666;">
 Successes / patients and success rates. Small stones: under 2 cm; large: 2 cm or more. A = open surgery; B = percutaneous nephrolithotomy.
@@ -253,17 +256,23 @@ Successes / patients and success rates. Small stones: under 2 cm; large: 2 cm or
 </table>
 <p>Overall, B succeeded in 82.6% of cases, compared with 78.0% for A. Yet A had higher success rates within both stone-size groups: 93.1% versus 86.7% for small stones, and 73.0% versus 68.8% for large stones. The winner changes when we combine the groups, just as it did with the baseball players.</p>
 <p>Why? Large stones accounted for 263 of A’s 350 cases, but only 80 of B’s 350. Success was less common for large stones under either treatment. A therefore faced a much heavier concentration of difficult cases. The overall comparison mixes treatment outcomes with differences in the patients being treated.</p>
-<p>subtitile: “The hidden ingredient: weights” Both reversals come from weighted averages. In the formula, g labels a subgroup, r is its success rate, and w is its share of the relevant total. The weights add to one. Each player or treatment has its own weights, reflecting its particular mix of opportunities or cases. An overall result answers what happened in the observed mix; a standardized comparison asks what the rates would look like with the same mix. Both need a clearly stated purpose.</p>
+</section>
+<section id="the-hidden-aspect-weights" class="level2">
+<h2 class="anchored" data-anchor-id="the-hidden-aspect-weights">The hidden aspect: weights</h2>
+<p>Both reversals come from weighted averages. In the formula, g labels a subgroup, r is its success rate, and w is its share of the relevant total. The weights add to one. Each player or treatment has its own weights, reflecting its particular mix of opportunities or cases. An overall result answers what happened in the observed mix; a standardized comparison asks what the rates would look like with the same mix. Both need a clearly stated purpose.</p>
 <p><span class="math display">\[\text{Overall rate}
 = \sum_{g=1}^{G} w_g r_g,
 \qquad
 \sum_{g=1}^{G} w_g = 1\]</span></p>
-<hr>
-<p>subtitile: “Why this Matter?” This matters when interpreting everyday comparisons. In education, school pass rates can reflect differences in students’ prior preparation. In business, campaign conversion rates can reflect whether audiences contain mostly returning customers or newcomers. Comparing relevant subgroups and showing their sizes helps readers see what an overall average actually combines.</p>
+</section>
+<section id="why-this-matter" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-matter">Why this Matter?</h2>
+<p>This matters when interpreting everyday comparisons. In education, school pass rates can reflect differences in students’ prior preparation. In business, campaign conversion rates can reflect whether audiences contain mostly returning customers or newcomers. Comparing relevant subgroups and showing their sizes helps readers see what an overall average actually combines.</p>
 <p>In research, the practical application is to examine group composition before interpreting a headline result. Researchers can also compare outcomes using a common set of weights, making the target population explicit. But subgroup comparisons alone do not establish causation: the kidney-stone comparison was historical and nonrandomized, so other differences could still matter.</p>
 <p>The lesson is not to distrust every average or split data endlessly. Choosing useful groups requires understanding the question and when variables were measured. Adjusting for consequences of an intervention can itself introduce bias. Next time a headline offers one impressive number, ask: who is inside it, and who contributes most? Simpson’s paradox reminds us that correct numbers can still tell an incomplete story.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
