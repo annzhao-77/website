@@ -10,12 +10,12 @@ categories:
 ![](simpsons.png){width="500px"}
 
 
-Have you ever watched The Simpsons? One of the most famous cartoon in U.S. I love the ironic plots and lovely characters in it. However,here is another Simpson worth meeting: Simpson's paradox. The shared name makes a fun introduction, but this statistical idea has nothing to do with Springfield. It describes a surprising reversal: a pattern appears in every subgroup, may be opposite with the conclusion that came up with all the groups combined. How can both stories be true?
+Have you ever watched The Simpsons? One of the most famous cartoon in U.S. I love the ironic plots and lovely characters in it. However,here is another Simpson worth meeting: Simpson's paradox. It describes a surprising reversal: a pattern appears in every subgroup, may be opposite with the conclusion that came up with all the groups combined. How can both stories be true?
 
 
 ## Two hitters, one surprising scoreboard
 
-Consider the baseball example: Derek Jeter and David Justice in 1995 and 1996. A batting average is hits divided by at-bats, the batting opportunities counted in this statistic. Justice leads in both seasons: 25.3% versus 25.0%, then 32.1% versus 31.4%. Who would you expect to lead across both years?
+Consider the baseball example: Derek Jeter and David Justice in 1995 and 1996. A batting average is hits divided by at-bats, the batting opportunities counted in this statistic. Justice leads in both seasons: 25.3% versus 25.0%, then 32.1% versus 31.4%. Who would you expect to be a better baseball player?
 
 ```{r}
 #| echo: false
@@ -42,14 +42,14 @@ knitr::kable(
 )
 ```
 
-Jeter wins the combined comparison: 195 hits from 630 at-bats, or 31.0%, against Justice's 149 from 551, or 27.0%. About 92% of Jeter's opportunities came in 1996, when both players had higher averages. Only about 25% of Justice's came that year. Their combined averages therefore give very different importance to each season.
 
+Jeter wins the combined comparison. Jeter had 195 hits in 630 at-bats, an average of 31.0%. Justice had 149 hits in 551 at-bats, or 27.0%. Jeter comes out ahead. The reason is that the players had different numbers of at-bats each year. About 92% of Jeter’s at-bats came in 1996, when both players had higher averages. Only about 25% of Justice’s came that year. Jeter’s overall average is therefore closer to his stronger year. Counting both years equally would miss this difference. 
 
 ![](baseball.png){width="500px"} 
 
 ## Kidney-stone research example
 
-The same reversal appears in published research. A 1986 study by Charig and colleagues compared kidney-stone treatments. Here we focus on open surgery (A) and percutaneous nephrolithotomy (B), which removes stones through a small opening. Success meant eliminating stones or reducing them below two millimetres after three months.
+A study of kidney-stone treatments shows the same problem. In 1986, Charig and his colleagues compared several treatments. Here, Treatment A means open surgery. Here we focus on open surgery (A) and percutaneous nephrolithotomy (B), which removes stones through a small opening. Success meant eliminating stones or reducing them below two millimetres after three months.
 
 
 
@@ -89,14 +89,15 @@ knitr::kable(
 
 
 
-Overall, B succeeded in 82.6% of cases, compared with 78.0% for A. Yet A had higher success rates within both stone-size groups: 93.1% versus 86.7% for small stones, and 73.0% versus 68.8% for large stones. The winner changes when we combine the groups, just as it did with the baseball players.
 
-Why? Large stones accounted for 263 of A's 350 cases, but only 80 of B's 350. Success was less common for large stones under either treatment. A therefore faced a much heavier concentration of difficult cases. The overall comparison mixes treatment outcomes with differences in the patients being treated.
+Overall, Treatment B succeeded in 82.6% of cases, compared with 78.0% for Treatment A. Yet A had higher success rates within both stone-size groups: 93.1% versus 86.7% for small stones, and 73.0% versus 68.8% for large stones. The winner changes when we combine the groups, same as the baseball players example.
+
+Why? Large stones accounted for 263 of A's 350 cases, but only 80 of B's 350. Success was less common for large stones under either treatment. Treatment A, therefore, faced a much heavier concentration of difficult cases. The overall comparison mixes treatment outcomes with differences in the patients being treated.
 
 
-## The hidden aspect: weights
+## The hidden reason: weights
 
-Both reversals come from weighted averages. In the formula, g labels a subgroup, r is its success rate, and w is its share of the relevant total. The weights add to one. Each player or treatment has its own weights, reflecting its particular mix of opportunities or cases. An overall result answers what happened in the observed mix; a standardized comparison asks what the rates would look like with the same mix. Both need a clearly stated purpose.
+Both reversals caused by weighted averages. In the formula, g labels a subgroup, r refers to success rate, and w means share of the relevant total. The weights add to one. Each player or treatment has its own weights, reflecting its particular mix of opportunities or cases. An overall result answers what happened in the observed mix. a standardized comparison asks what the rates would look like with the same mix. Both need a clearly stated purpose.
 
 $$\text{Overall rate}
 = \sum_{g=1}^{G} w_g r_g,
@@ -106,8 +107,22 @@ $$\text{Overall rate}
 
 ## Why this Matter?
 
-This matters when interpreting everyday comparisons. In education, school pass rates can reflect differences in students' prior preparation. In business, campaign conversion rates can reflect whether audiences contain mostly returning customers or newcomers. Comparing relevant subgroups and showing their sizes helps readers see what an overall average actually combines.
+Simpson's paradox matters. A school’s pass rate may partly reflect how prepared its students were before they arrived. An advertising campaign may reach more returning customers than another campaign. Looking only at the overall results can hide these differences. Looking at group sizes helps us understand what we are comparing.
 
-In research, the practical application is to examine group composition before interpreting a headline result. Researchers can also compare outcomes using a common set of weights, making the target population explicit. But subgroup comparisons alone do not establish causation: the kidney-stone comparison was historical and nonrandomized, so other differences could still matter.
+In research, the application is to examine group composition before interpreting a headline result. Researchers can also compare outcomes using a common set of weights, making the target population explicit. But subgroup comparisons alone do not establish causation: the kidney-stone comparison was historical and nonrandomized, so other differences could still matter.
 
-The lesson is not to distrust every average or split data endlessly. Choosing useful groups requires understanding the question and when variables were measured. Adjusting for consequences of an intervention can itself introduce bias. Next time a headline offers one impressive number, ask: who is inside it, and who contributes most? Simpson's paradox reminds us that correct numbers can still tell an incomplete story.
+For me, the key point is to rethink before trusting a single average. Who is included? Which group makes up most of the total? Does the pattern change when we look deeper? Simpson's paradox reminds us that correct numbers can still tell an incomplete story.
+
+
+
+## References
+
+Charig, C. R., Webb, D. R., Payne, S. R., & Wickham, J. E. (1986). Comparison of treatment of renal calculi by open surgery, percutaneous nephrolithotomy, and extracorporeal shockwave lithotripsy. *British Medical Journal (Clinical Research Edition), 292*(6524), 879–882. [https://doi.org/10.1136/bmj.292.6524.879](https://doi.org/10.1136/bmj.292.6524.879)
+
+Illustrative Mathematics. (n.d.). *Who is the better batter?* [View source](https://tasks.illustrativemathematics.org/content-standards/EE/7/B/3/tasks/1588)
+
+Julious, S. A., & Mullee, M. A. (1994). Confounding and Simpson's paradox. *BMJ, 309*(6967), 1480–1481. [https://doi.org/10.1136/bmj.309.6967.1480](https://doi.org/10.1136/bmj.309.6967.1480)
+
+Rachel. (2023, May 13). *A perplexing phenomenon: Simpson's paradox*. MyPointIs. [View source](https://mypointis.org/a-perplexing-phenomenon-simpsons-paradox/)
+
+*Econometrics I: Week 2—Probability as a modeling language*. (n.d.). [Course handout]. Section 2.14, pp. 20–21.
