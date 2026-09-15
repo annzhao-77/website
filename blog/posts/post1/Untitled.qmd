@@ -43,6 +43,7 @@ knitr::kable(
 ```
 
 
+
 Jeter wins the combined comparison. Jeter had 195 hits in 630 at-bats, an average of 31.0%. Justice had 149 hits in 551 at-bats, or 27.0%. Jeter comes out ahead. The reason is that the players had different numbers of at-bats each year. About 92% of Jeter’s at-bats came in 1996, when both players had higher averages. Only about 25% of Justice’s came that year. Jeter’s overall average is therefore closer to his stronger year. Counting both years equally would miss this difference. 
 
 ![](baseball.png){width="500px"} 
