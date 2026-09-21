@@ -1,10 +1,12 @@
 ---
-title: "What Skills Do ACME Job Postings mentioned most?"
+title: "What Skills Do ACME Job Postings Mentioned Most?"
 date: 2026-09-20
 categories:
   - opinion
   - labor market
 ---
+
+![](figures/acmelogo.jpg){width="500px"}
 
 ## Motivation and Research Question
 ACME is one of the biggest retail supermarkets in Philadelphia; one of its stores is located just beside the University of Pennsylvania. I became curious about what kind of job positions the Philadelphia ACME store offered and what skills they would like to see in applicants. This blog aims to conduct research that focuses on which specific skills are mentioned most frequently in ACME’s Philadelphia-area job postings, and how these mentions differ across job types. I believe that after reading this article, you will be clear about what skills you should write on your resume or mention during an interview, rather than just saying you have good customer service. 
