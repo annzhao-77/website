@@ -60,7 +60,7 @@
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "What Skills Do ACME Job Postings Mentioned Most?\n\n\n\n\n\n\n\n\nSep 20, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMeet the other Simpson–The Simpson’s Paradox\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Education and Unemployment\n\n\n\n\n\n\n\n\nSep 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWhat Skills Do ACME Job Postings Mentioned Most?\n\n\n\n\n\n\n\n\nSep 20, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMeet the other Simpson–The Simpson’s Paradox\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -159,5 +159,54 @@
     "title": "Anna Zhao",
     "section": "",
     "text": "Anna Zhao\nUniversity of Pennsylvania\nWelcome to my personal website.\n\nQuick Links"
+  },
+  {
+    "objectID": "blog/posts/post3/index.html",
+    "href": "blog/posts/post3/index.html",
+    "title": "Education and Unemployment",
+    "section": "",
+    "text": "Education is often consider as a method to improve job opportunities. As a graduate student, I am curious about whether we can use data to testify the theory that people with different levels of education experience different unemployment rates. This blog uses U.S. Current Population Survey data from 2024 to analysis How does unemployment vary by educational attainment among adults aged 25–64. And does this pattern differ by sex and age?"
+  },
+  {
+    "objectID": "blog/posts/post3/index.html#motivation-and-research-question",
+    "href": "blog/posts/post3/index.html#motivation-and-research-question",
+    "title": "Education and Unemployment",
+    "section": "",
+    "text": "Education is often consider as a method to improve job opportunities. As a graduate student, I am curious about whether we can use data to testify the theory that people with different levels of education experience different unemployment rates. This blog uses U.S. Current Population Survey data from 2024 to analysis How does unemployment vary by educational attainment among adults aged 25–64. And does this pattern differ by sex and age?"
+  },
+  {
+    "objectID": "blog/posts/post3/index.html#data-and-methodology",
+    "href": "blog/posts/post3/index.html#data-and-methodology",
+    "title": "Education and Unemployment",
+    "section": "Data and Methodology",
+    "text": "Data and Methodology\nThe data are download from IPUMS CPS official website. The CPS is a monthly U.S. household survey conducted jointly by the U.S. Census Bureau and the Bureau of Labor Statistics. The survey was designed to measure unemployment. The research samples are selected from 12 basic monthly data in 2024. The target are civilian labor force, age between 25 and 64. With the specific age group of 25-64, we can eliminate the effect caused by retire and student who haven’t graduate. In the sample, there are four education groups in total: less than high school, high school graduate, some college, bachelor’s and above.\nI use the CPS person-level sampling weight, WTFINL, to calculate unemployment rates.(U) denotes unemployed person-month records and (L) denotes all person-month records in the civilian labor force within each group. \\[\n\\text{Unemployment rate}\n=\n\\frac{\\sum_{i \\in U} \\text{WTFINL}_i}\n{\\sum_{i \\in L} \\text{WTFINL}_i}\n\\times 100\n\\] The labor force includes both employed and unemployed people. It excludes people outside the labor force, such as retirees and who are not active seeking for work. I combine all 12 months of 2024, so the resulting rate is the ratio of the annual-average unemployed population to the annual-average labor force. Because the same person may be surveyed in multiple months, the observations represent person-month records."
+  },
+  {
+    "objectID": "blog/posts/post3/index.html#findings",
+    "href": "blog/posts/post3/index.html#findings",
+    "title": "Education and Unemployment",
+    "section": "Findings",
+    "text": "Findings\n\nUnemployment by Education\n Firstly, let’s look at the pattern reveals in our sample data. In the samples, we can see that as education level increased, the unemployment rate decreased. The people with education group that is less than high school have unemployment rate of 6.3%, while people who have education level of bachelor’s or higher only have unemployment rate of 2.3%. The data reflect there is valid relation between education level and unemployment. Are there any differences among sex group or other traits? let’s dive deeper into the data.\n\n\nComparing Men and Women\n\n\n\nWeighted unemployment rates by education and sex, ages 25–64, 2024.\n\n\nThis diagram illustrate the differences in different sex group. For labor force who have educational level that is less than high school, there is a large gap between men and women. Women have a unemployment rate of 7.6%, while men only have unemployment rate of 5.7%. As the educational level keep increase, the unemployment gap between women and men becomes smaller, and reach equal level at bachelor’s or higher education group. For the reason behind this pattern, I believe it may related to jobs type that vary among different education group. People in less than high school education group may more likely to participate in physical-intensive job position, that men will have natural advantage against women.\n\n\nComparing Age Groups\n Lastly, I compared how result differ among age groups. Younger adults have higher unemployment rates in every education group. For adults in less than high school education group, people that in ages 26-44 have unemployment rate of 7.3% which is higher than people that in ages 45-66. This pattern consist in every education group."
+  },
+  {
+    "objectID": "blog/posts/post3/index.html#key-takeaways",
+    "href": "blog/posts/post3/index.html#key-takeaways",
+    "title": "Education and Unemployment",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\nThrough these three diagrams, we can draw the conclusion that higher educational attainment is associated with lower unemployment among U.S. adults in the civilian labor force. In 2024, the weighted unemployment rate was approximately 6.3% for those without a high school diploma, compared with 2.3% for those with a bachelor’s degree or higher.However, differences remain within education groups. The female–male gap is largest among those without a high school diploma, while adults aged 25–44 have higher unemployment rates than those aged 45–64 in every education group. It suggest that education is an important part of the comparison, but it does not fully describe differences in unemployment."
+  },
+  {
+    "objectID": "blog/posts/post3/index.html#limitations-and-conclusion",
+    "href": "blog/posts/post3/index.html#limitations-and-conclusion",
+    "title": "Education and Unemployment",
+    "section": "Limitations and Conclusion",
+    "text": "Limitations and Conclusion\nFor research limitation, this analysis is descriptive and does not establish that additional education causes lower unemployment. Differences in occupation, industry, location, and family circumstances may also contribute to the observed patterns. Therefore, these figures do not capture gender differences in labor-force participation or establish why people are outside the labor force. Also, the analysis covers only 2024 and relies on survey estimates.\nIn conclusion, higher education is associated with lower unemployment, although the size of the differences varies by sex and age. In this case, education provides a useful starting point for understanding unemployment patterns, but it is not a complete explanation."
+  },
+  {
+    "objectID": "blog/posts/post3/index.html#data-source",
+    "href": "blog/posts/post3/index.html#data-source",
+    "title": "Education and Unemployment",
+    "section": "Data Source",
+    "text": "Data Source\nThis analysis uses the January–December 2024 Basic Monthly samples from IPUMS CPS. The underlying CPS data are provided by the U.S. Census Bureau and the Bureau of Labor Statistics.\nSarah Flood, Miriam King, Renae Rodgers, Steven Ruggles, J. Robert Warren, Daniel Backman, Etienne Breton, Grace Cooper, Julia A. Rivera Drew, Stephanie Richards, David Van Riper. Integrated Public Use Microdata Series, Current Population Survey: Version 13.0 [dataset]. Minneapolis, MN: IPUMS, 2025. https://doi.org/10.18128/D030.V13.0MN: IPUMS, 2025. https://doi.org/10.18128/D030.V13.0"
   }
 ]
