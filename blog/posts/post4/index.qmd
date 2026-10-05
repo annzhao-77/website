@@ -6,7 +6,7 @@ categories:
   - data visualization
 ---
 
-!(figures/intro.jpg){width="100%"}
+![](figures/intro.jpg){width="100%"}
 
 ## Motivation and Research Question
 
