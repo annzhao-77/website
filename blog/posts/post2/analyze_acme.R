@@ -3,7 +3,8 @@ library(dplyr)
 library(stringr)
 library(ggplot2)
 
-setwd("C:/Users/DELL/Desktop/AEDS 6400/website1/blog/posts/post2")
+# Run from post2, or from the repository root with:
+# source("blog/posts/post2/analyze_acme.R", chdir = TRUE)
 if (.Platform$OS.type == "windows") Sys.setlocale("LC_CTYPE", ".UTF-8")
 
 # 1. Read and check the data. One row should mean one job posting.
@@ -98,7 +99,13 @@ by_type <- skill_results %>%
   summarise(postings = n(), mentions = sum(mentioned), .groups = "drop") %>%
   mutate(percent = mentions / postings * 100)
 
-# 6. Make three figures. Only the figures are saved; analysis tables stay in R.
+# Save the underlying numbers as well as the figures.
+dir.create("results", showWarnings = FALSE)
+write.csv(job_counts, "results/job_counts.csv", row.names = FALSE)
+write.csv(skill_summary, "results/skill_summary.csv", row.names = FALSE)
+write.csv(by_type, "results/skills_by_job_type.csv", row.names = FALSE)
+
+# 6. Make three figures.
 dir.create("figures", showWarnings = FALSE)
 theme_set(theme_minimal(base_size = 12))
 source_note <- paste0("Source: ACME career postings, collected 20 Sep 2026 | N = ", nrow(jobs), ".")

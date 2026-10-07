@@ -1,10 +1,19 @@
 # Blog 3: Education and unemployment, 2024
+# From the repository root: source("blog/posts/post3/analysis.R", chdir = TRUE)
 library(dplyr)
 library(ggplot2)
 
 # Read the data ---------------------------------------------------------
-data_file <- "C:/Users/DELL/Desktop/cps_00001.csv"
+data_file <- Sys.getenv("CPS_DATA_FILE", unset = "data/cps.csv")
+if (!file.exists(data_file)) {
+  stop("CPS data not found. Follow README.md to obtain the CSV and set CPS_DATA_FILE.")
+}
 cps <- read.csv(data_file)
+
+# Stop if a different extract was selected by mistake.
+stopifnot(all(c("YEAR", "MONTH", "AGE", "SEX", "EDUC", "EMPSTAT", "WTFINL") %in% names(cps)))
+stopifnot(!anyNA(cps$YEAR), all(cps$YEAR == 2024),
+          !anyNA(cps$MONTH), setequal(cps$MONTH, 1:12))
 
 print(table(cps$YEAR, cps$MONTH))
 

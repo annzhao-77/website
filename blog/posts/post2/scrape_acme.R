@@ -4,7 +4,8 @@ library(rvest)
 library(stringr)
 library(magrittr) # %>%: pass the result to the next step, as in DataCamp
 
-setwd("C:/Users/DELL/Desktop/AEDS 6400/website1/blog/posts/post2")
+# Run from post2, or from the repository root with:
+# source("blog/posts/post2/scrape_acme.R", chdir = TRUE)
 if (.Platform$OS.type == "windows") Sys.setlocale("LC_CTYPE", ".UTF-8")
 
 # 1. Open the search page. This website loads its jobs using JavaScript.

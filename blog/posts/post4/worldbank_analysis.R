@@ -1,4 +1,5 @@
 # Blog 4: Economic prosperity and life expectancy
+# From the repository root: source("blog/posts/post4/worldbank_analysis.R", chdir = TRUE)
 # Set the working directory to post4 before running this script.
 # RStudio: Session > Set Working Directory > To Source File Location.
 # Install once: install.packages(c("WDI", "dplyr", "ggplot2"))
@@ -32,6 +33,11 @@ if (refresh_data | !file.exists("data/worldbank_data.csv")) {
 countries <- wb %>%
   filter(!is.na(region), region != "Aggregates")
 
+# Each economy should occur only once in each year.
+stopifnot(all(c("iso3c", "year", "gdp_per_capita", "life_expectancy") %in% names(countries)))
+stopifnot(!anyNA(countries$iso3c), all(nzchar(countries$iso3c)),
+          !anyDuplicated(countries[c("iso3c", "year")]))
+
 coverage <- countries %>%
   group_by(year) %>%
   summarise(
@@ -50,6 +56,7 @@ latest <- countries %>%
   filter(year == end_year, !is.na(gdp_per_capita), gdp_per_capita > 0,
          !is.na(life_expectancy))
 stopifnot(nrow(latest) > 0, !anyDuplicated(latest$iso3c))
+write.csv(latest, "data/latest_year.csv", row.names = FALSE)
 
 baseline <- countries %>%
   filter(year == start_year, !is.na(gdp_per_capita), gdp_per_capita > 0,
@@ -113,6 +120,8 @@ fit_line <- data.frame(gdp_per_capita = exp(seq(
 )))
 fit_line$life_expectancy <- predict(fit, newdata = fit_line)
 print(summary(fit)$coefficients)
+write.csv(data.frame(term = names(coef(fit)), estimate = unname(coef(fit))),
+          "data/model_coefficients.csv", row.names = FALSE)
 
 # Fix region colors so they are consistent in both scatterplots.
 region_names <- sort(unique(latest$region))

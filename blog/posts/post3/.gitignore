@@ -1,0 +1,6 @@
+# Keep locally downloaded CPS microdata out of Git.
+data/
+cps_*.csv
+cps_*.csv.gz
+cps_*.dat
+cps_*.dat.gz
