@@ -10,6 +10,8 @@ categories:
 
 ## Motivation and Research Question
 
+[Code, data, and reproduction instructions](https://github.com/annzhao-77/BLOG3)
+
 Education is often considered a way to improve job opportunities. As a graduate student, I am curious about whether we can use data to test the theory that people with different levels of education experience different unemployment rates. This blog uses U.S. Current Population Survey data from 2024 to analyze how unemployment varies by educational attainment among adults aged 25–64. And does this pattern differ by sex and age?
 
 ## Data and Methodology

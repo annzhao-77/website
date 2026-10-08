@@ -172,7 +172,7 @@
     "href": "blog/posts/post3/index.html#motivation-and-research-question",
     "title": "Education and Unemployment",
     "section": "Motivation and Research Question",
-    "text": "Motivation and Research Question\nEducation is often considered a way to improve job opportunities. As a graduate student, I am curious about whether we can use data to test the theory that people with different levels of education experience different unemployment rates. This blog uses U.S. Current Population Survey data from 2024 to analyze how unemployment varies by educational attainment among adults aged 25–64. And does this pattern differ by sex and age?"
+    "text": "Motivation and Research Question\nCode, data, and reproduction instructions\nEducation is often considered a way to improve job opportunities. As a graduate student, I am curious about whether we can use data to test the theory that people with different levels of education experience different unemployment rates. This blog uses U.S. Current Population Survey data from 2024 to analyze how unemployment varies by educational attainment among adults aged 25–64. And does this pattern differ by sex and age?"
   },
   {
     "objectID": "blog/posts/post3/index.html#data-and-methodology",
@@ -221,7 +221,7 @@
     "href": "blog/posts/post4/index.html#motivation-and-research-question",
     "title": "Richer Countries, Longer Lives?",
     "section": "Motivation and Research Question",
-    "text": "Motivation and Research Question\nEconomic prosperity is often associated with better living conditions, but does it also go together with longer lives? This blog uses World Bank data to examine how GDP per capita relates to life expectancy across countries. It also asks whether faster economic growth between 2000 and 2024 accompanies larger improvements in life expectancy. These comparisons describe associations rather than causal relationships."
+    "text": "Motivation and Research Question\nCode, data, and reproduction instructions\nEconomic prosperity is often associated with better living conditions, but does it also go together with longer lives? This blog uses World Bank data to examine how GDP per capita relates to life expectancy across countries. It also asks whether faster economic growth between 2000 and 2024 accompanies larger improvements in life expectancy. These comparisons describe associations rather than causal relationships."
   },
   {
     "objectID": "blog/posts/post4/index.html#data-and-methodology",
