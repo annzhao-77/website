@@ -10,6 +10,7 @@ This repository maintains the blog articles, display images, and Quarto website.
 | Blog 2: ACME job skills | [QMD](blog/posts/post2/index.qmd) | [BLOG2](https://github.com/annzhao-77/BLOG2) |
 | Blog 3: Education and unemployment | [QMD](blog/posts/post3/index.qmd) | [BLOG3](https://github.com/annzhao-77/BLOG3) |
 | Blog 4: Prosperity and longevity | [QMD](blog/posts/post4/index.qmd) | [BLOG4](https://github.com/annzhao-77/BLOG4) |
+| Blog 5: Pennsylvania population and migration | [QMD](blog/posts/post5/index.qmd) | [BLOG5](https://github.com/annzhao-77/BLOG5) |
 
 ## Repository layout
 
