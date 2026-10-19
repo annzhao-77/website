@@ -1,5 +1,5 @@
 ---
-title: "Where Is Pennsylvania Growing—and What Role Does Migration Play?"
+title: "Where Is Pennsylvania Population Growing?"
 date: 2026-10-17
 categories:
   - population
