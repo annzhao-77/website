@@ -375,7 +375,7 @@
     "href": "blog/posts/post6/index.html#results-and-takeaway",
     "title": "Matching Fathers and Children: A SQL Tutorial in Python",
     "section": "Results and Takeaway",
-    "text": "Results and Takeaway\n\nBoth models use 143 pairs and 123 fathers.\n\n\n\nIncome measure\nIGE\n\n\n\n\nSingle year at age 36\n0.220\n\n\nAverage at ages 29–43\n0.297\n\n\n\n \nBoth models show that higher-income fathers tend to have higher-income children. The IGE is 0.220 using single-year income and 0.297 using average income, suggesting stronger persistence when income is measured over several years. However, the difference cannot be attributed solely to life-cycle bias: averaging also smooths temporary income fluctuations, and we do not observe lifetime income to determine which estimate is closer to the lifetime IGE."
+    "text": "Results and Takeaway\n\nBoth models use 143 pairs and 123 fathers, since some fathers have more than one child in the data.\n\n\n\nIncome measure\nIGE\n\n\n\n\nSingle year at age 36\n0.220\n\n\nAverage at ages 29–43\n0.297\n\n\n\n \nBoth models show that higher-income fathers tend to have higher-income children. The IGE is 0.220 using single-year income and 0.297 using average income, suggesting stronger persistence when income is measured over several years. However, the difference cannot be attributed solely to life-cycle bias: averaging also smooths temporary income fluctuations, and we do not observe lifetime income to determine which estimate is closer to the lifetime IGE."
   },
   {
     "objectID": "blog/posts/post6/index.html#limitations",
