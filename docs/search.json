@@ -60,7 +60,7 @@
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Where Is Pennsylvania Population Growing?\n\n\n\n\n\n\n\n\nOct 17, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nRicher Countries, Longer Lives?\n\n\n\n\n\n\n\n\nOct 3, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEducation and Unemployment\n\n\n\n\n\n\n\n\nSep 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWhat Skills Do ACME Job Postings Mentioned Most?\n\n\n\n\n\n\n\n\nSep 20, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMeet the other Simpson–The Simpson’s Paradox\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Matching Fathers and Children: A SQL Tutorial in Python\n\n\n\n\n\n\n\n\nOct 21, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWhere Is Pennsylvania Population Growing?\n\n\n\n\n\n\n\n\nOct 17, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nRicher Countries, Longer Lives?\n\n\n\n\n\n\n\n\nOct 3, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEducation and Unemployment\n\n\n\n\n\n\n\n\nSep 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWhat Skills Do ACME Job Postings Mentioned Most?\n\n\n\n\n\n\n\n\nSep 20, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMeet the other Simpson–The Simpson’s Paradox\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -320,5 +320,68 @@
     "title": "Where Is Pennsylvania Population Growing?",
     "section": "Data Sources",
     "text": "Data Sources\n\nU.S. Census Bureau, Population Division. Annual Resident Population Estimates and Components of Change for States and Counties: April 1, 2020 to July 1, 2025, Vintage 2025, released March 2026. Data and documentation.\nU.S. Census Bureau. 2023 Cartographic Boundary File: Counties, 1:5,000,000. Boundary download.\n\nFiles accessed October 17, 2026. The BLOG5 repository contains the input snapshots, R script, and generated tables supporting the figures and numbers above."
+  },
+  {
+    "objectID": "blog/posts/post6/index.html",
+    "href": "blog/posts/post6/index.html",
+    "title": "Matching Fathers and Children: A SQL Tutorial in Python",
+    "section": "",
+    "text": "I recently started learning SQL and found it useful for connecting tables and organizing data. In this tutorial, I share what I learned through a practical question: Do higher-income fathers tend to have higher-income children? We will use SQL to match fathers with their adult children and construct income measures, then use Python to estimate the relationship."
+  },
+  {
+    "objectID": "blog/posts/post6/index.html#motivation-and-research-question",
+    "href": "blog/posts/post6/index.html#motivation-and-research-question",
+    "title": "Matching Fathers and Children: A SQL Tutorial in Python",
+    "section": "",
+    "text": "I recently started learning SQL and found it useful for connecting tables and organizing data. In this tutorial, I share what I learned through a practical question: Do higher-income fathers tend to have higher-income children? We will use SQL to match fathers with their adult children and construct income measures, then use Python to estimate the relationship."
+  },
+  {
+    "objectID": "blog/posts/post6/index.html#data-and-method",
+    "href": "blog/posts/post6/index.html#data-and-method",
+    "title": "Matching Fathers and Children: A SQL Tutorial in Python",
+    "section": "Data and Method",
+    "text": "Data and Method\nI use the Panel Study of Income Dynamics and its Family Identification Mapping System (FIMS). Here, “children” refers to the fathers’ adult sons and daughters. I use the 1994–2023 survey waves, which report income for 1993–2022. The labor-income variables selected for these waves exclude farm and unincorporated business income. Earlier measures for household heads included these components. To avoid mixing different income definitions, I restrict the analysis to the 1994–2023 surveys.\nWe estimate a simple log regression:\n\\[\n\\log(Y_{child,i})=\\alpha+\\beta\\log(Y_{father,i})+\\varepsilon_i.\n\\]\nThe slope \\(\\beta\\) is the intergenerational income elasticity (IGE): a 1% difference in fathers’ income is associated with approximately a \\(\\beta\\)% difference in children’s income.\nFirst, we use income measured at approximately age 36 for both fathers and children. We estimate age in the income year by subtracting one from survey age because income refers to the previous year. Among ages 30–45, age 36 gives us the most father-child pairs with enough data for both models. Fathers and children usually reach this age in different calendar years, so we convert their incomes to 2022 dollars using BLS CPI-U: multiply each amount by \\(CPI_{2022}/CPI_{income\\ year}\\).\nLife-cycle bias can arise when we use income at one age to represent lifetime income. People who spend more years in school may earn little when young but much more later. Measuring children’s income too early can therefore bias the IGE downward, making income persistence appear weaker. However, life-cycle bias can be upward or downward, depending on when income is measured and how earnings change over time. Even when fathers and children are measured at the same age, they may be at different career stages. Averaging several years helps smooth temporary income fluctuations and provides a better proxy for long-term income (Mazumder, 2018).\nTo better approximate long-term income, our second regression uses each person’s average real income at ages 29–43. We calculate this average before taking logs. Each person must have at least three income observations, allowing us to use repeated measurements while retaining enough matched pairs. The number of available observations varies because surveys are not conducted every year in the later period and some records are unavailable. In our sample, the averages use 6.4 observations for fathers and 5.1 for children, on average."
+  },
+  {
+    "objectID": "blog/posts/post6/index.html#connect-fathers-and-children",
+    "href": "blog/posts/post6/index.html#connect-fathers-and-children",
+    "title": "Matching Fathers and Children: A SQL Tutorial in Python",
+    "section": "1. Connect Fathers and Children",
+    "text": "1. Connect Fathers and Children\nThe complete workflow is available in code/analysis.py. To follow along, place your downloaded PSID files in data/raw/ and follow the README instructions.\nPython first reads the files and prepares four SQLite tables:\n\n\n\n\n\n\n\nTable\nContents\n\n\n\n\npeople\nOne row per person, with a permanent ID\n\n\nrelationships\nChild and biological father IDs from FIMS\n\n\nperson_year\nEach person’s age, family ID, household role, and income fields by survey year\n\n\ncpi\nAnnual CPI values for inflation adjustment\n\n\n\nThe permanent person ID combines the 1968 family ID and person number, allowing us to identify the same person across years.\nWe start with the father-child links in relationships. We check both IDs against people to keep pairs where both individuals appear in our income extract:\nCREATE TABLE father_child AS\nSELECT DISTINCT r.child_id, r.father_id\nFROM relationships AS r\nJOIN people AS c ON r.child_id = c.person_id\nJOIN people AS p ON r.father_id = p.person_id;\nCREATE TABLE saves the result as father_child, and SELECT chooses the two IDs. The first JOIN checks for the child; the second checks for the father. The aliases r, c, and p identify the tables used in each comparison. DISTINCT removes duplicate pairs, leaving one row per father-child pair for the next step."
+  },
+  {
+    "objectID": "blog/posts/post6/index.html#find-their-own-income",
+    "href": "blog/posts/post6/index.html#find-their-own-income",
+    "title": "Matching Fathers and Children: A SQL Tutorial in Python",
+    "section": "2. Find Their Own Income",
+    "text": "2. Find Their Own Income\nThe person_year table contains each person’s household role. We select the corresponding income field:\nSELECT person_id, survey_year,\n       CASE\n           -- Current reference person (formerly called Head):\n           -- sequence number 1 and relationship code 10\n           WHEN sequence_number = 1 AND relationship = 10\n               THEN head_income\n\n           -- Current spouse or partner:\n           -- sequence number 2; relationship 20 = spouse, 22 = partner\n           WHEN sequence_number = 2 AND relationship IN (20, 22)\n               THEN spouse_income\n       END AS nominal_income\nFROM person_year\nWHERE family_id &gt; 0;\nNow that we have matched fathers and children, we need to find each person’s own income. CASE selects the appropriate income field based on their household role. For example, an adult child recorded as a spouse needs the spouse-income field. WHERE keeps records with a valid family ID. The full script then adjusts income using CPI."
+  },
+  {
+    "objectID": "blog/posts/post6/index.html#build-average-income-and-match-again",
+    "href": "blog/posts/post6/index.html#build-average-income-and-match-again",
+    "title": "Matching Fathers and Children: A SQL Tutorial in Python",
+    "section": "3. Build Average Income and Match Again",
+    "text": "3. Build Average Income and Match Again\nThe single-year regression selects age 36. For the average income model, we need to use SQL to group income records by person:\nCREATE TABLE averages AS\nSELECT person_id, AVG(real_income) AS mean_income,\n       -- Record how many income observations contribute to each average\n       COUNT(*) AS n_years\nFROM income\nWHERE age BETWEEN 29 AND 43\nGROUP BY person_id\nHAVING COUNT(*) &gt;= 3;\nGROUP BY collects each person’s records. AVG() calculates their average income, while n_years records its observation count. HAVING keeps only people with at least three observations.\nWe now have two tables: father_child contains the father-child ID pairs, and averages contains each person’s average income. We connect them so that each pair’s two incomes appear on the same row:\nSELECT f.child_id, f.father_id,\n       p.mean_income AS father_average,\n       c.mean_income AS child_average\nFROM father_child AS f\n-- Find the father's average income using his ID\nJOIN averages AS p ON f.father_id = p.person_id\n-- Find the child's average income using their ID\nJOIN averages AS c ON f.child_id = c.person_id;\nThe result places each father-child pair and their average incomes on one row. In code/analysis.py, additional joins add both incomes at age 36. Both regressions use the same pairs, requiring all four income measures to be positive before taking logs. Zero-income observations are included when calculating averages."
+  },
+  {
+    "objectID": "blog/posts/post6/index.html#estimate-in-python",
+    "href": "blog/posts/post6/index.html#estimate-in-python",
+    "title": "Matching Fathers and Children: A SQL Tutorial in Python",
+    "section": "4. Estimate in Python",
+    "text": "4. Estimate in Python\nPython fits OLS with an intercept:\nimport numpy as np\nfrom statsmodels.api import OLS, add_constant\n\nx = add_constant(np.log(sample[\"father_mature\"]))\ny = np.log(sample[\"child_mature\"])\nmodel = OLS(y, x).fit()\nThe coefficient on the father’s log income is the IGE. Replacing these age-36 income columns with father_average and child_average gives the estimate using multiyear average income."
+  },
+  {
+    "objectID": "blog/posts/post6/index.html#results-and-takeaway",
+    "href": "blog/posts/post6/index.html#results-and-takeaway",
+    "title": "Matching Fathers and Children: A SQL Tutorial in Python",
+    "section": "Results and Takeaway",
+    "text": "Results and Takeaway\n\nBoth models use 143 pairs and 123 fathers.\n\n\n\nIncome measure\nIGE\n\n\n\n\nSingle year at age 36\n0.220\n\n\nAverage at ages 29–43\n0.297\n\n\n\n \nBoth models show that higher-income fathers tend to have higher-income children. The IGE is 0.220 using single-year income and 0.297 using average income, suggesting stronger persistence when income is measured over several years. However, the difference cannot be attributed solely to life-cycle bias: averaging also smooths temporary income fluctuations, and we do not observe lifetime income to determine which estimate is closer to the lifetime IGE."
+  },
+  {
+    "objectID": "blog/posts/post6/index.html#limitations",
+    "href": "blog/posts/post6/index.html#limitations",
+    "title": "Matching Fathers and Children: A SQL Tutorial in Python",
+    "section": "Limitations",
+    "text": "Limitations\n\nLimited sample: To avoid mixing income definitions across the 1994 survey change, we use only the 1994–2023 surveys. This limits how many father-child pairs have income records at the same age.\nPartial income coverage: Income records span about eight years per person on average, and later surveys occur every two years. Our averages therefore cover only part of each person’s working life and serve as proxies for lifetime income, rather than complete measures of it.\nDifferences across periods: CPI adjustment makes incomes comparable in purchasing power, but it does not account for changes in labor-market conditions between the years when fathers and children were observed."
   }
 ]
