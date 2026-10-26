@@ -60,7 +60,7 @@
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Matching Fathers and Children: A SQL Tutorial in Python\n\n\n\n\n\n\n\n\nOct 21, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWhere Is Pennsylvania Population Growing?\n\n\n\n\n\n\n\n\nOct 17, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nRicher Countries, Longer Lives?\n\n\n\n\n\n\n\n\nOct 3, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEducation and Unemployment\n\n\n\n\n\n\n\n\nSep 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWhat Skills Do ACME Job Postings Mentioned Most?\n\n\n\n\n\n\n\n\nSep 20, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMeet the other Simpson–The Simpson’s Paradox\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Which Everyday Expenses Have Increased the Most Since 2019?\n\n\nExploring clothing, food, housing, and transportation prices with Plotly.\n\n\n\n\n\nOct 24, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMatching Fathers and Children: A SQL Tutorial in Python\n\n\n\n\n\n\n\n\nOct 21, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWhere Is Pennsylvania Population Growing?\n\n\n\n\n\n\n\n\nOct 17, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nRicher Countries, Longer Lives?\n\n\n\n\n\n\n\n\nOct 3, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nEducation and Unemployment\n\n\n\n\n\n\n\n\nSep 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWhat Skills Do ACME Job Postings Mentioned Most?\n\n\n\n\n\n\n\n\nSep 20, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nMeet the other Simpson–The Simpson’s Paradox\n\n\n\n\n\n\n\n\nSep 14, 2026\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -383,5 +383,61 @@
     "title": "Matching Fathers and Children: A SQL Tutorial in Python",
     "section": "Limitations",
     "text": "Limitations\n\nLimited sample: To avoid mixing income definitions across the 1994 survey change, we use only the 1994–2023 surveys. This limits how many father-child pairs have income records at the same age.\nPartial income coverage: Income records span about eight years per person on average, and later surveys occur every two years. Our averages therefore cover only part of each person’s working life and serve as proxies for lifetime income, rather than complete measures of it.\nDifferences across periods: CPI adjustment makes incomes comparable in purchasing power, but it does not account for changes in labor-market conditions between the years when fathers and children were observed."
+  },
+  {
+    "objectID": "blog/posts/post7/index.html",
+    "href": "blog/posts/post7/index.html",
+    "title": "Which Everyday Expenses Have Increased the Most Since 2019?",
+    "section": "",
+    "text": "Life has felt different to me since the COVID-19 pandemic, including the cost of everyday purchases. This made me wonder: have prices really risen, and which expenses have increased the most? I explore this question through “衣食住行,” a Chinese expression for clothing, food, housing, and transportation. Using 2019 as a pre-pandemic baseline, I compare price changes across these everyday categories with an interactive chart."
+  },
+  {
+    "objectID": "blog/posts/post7/index.html#motivation",
+    "href": "blog/posts/post7/index.html#motivation",
+    "title": "Which Everyday Expenses Have Increased the Most Since 2019?",
+    "section": "",
+    "text": "Life has felt different to me since the COVID-19 pandemic, including the cost of everyday purchases. This made me wonder: have prices really risen, and which expenses have increased the most? I explore this question through “衣食住行,” a Chinese expression for clothing, food, housing, and transportation. Using 2019 as a pre-pandemic baseline, I compare price changes across these everyday categories with an interactive chart."
+  },
+  {
+    "objectID": "blog/posts/post7/index.html#data-and-method",
+    "href": "blog/posts/post7/index.html#data-and-method",
+    "title": "Which Everyday Expenses Have Increased the Most Since 2019?",
+    "section": "Data and Method",
+    "text": "Data and Method\nI use monthly BLS Consumer Price Index data downloaded through FRED. The six categories are apparel, groceries, dining out, shelter, electricity, and gasoline. These indexes track prices paid by urban consumers across U.S. cities. Overall CPI combines a broader basket of goods and services, weighted by consumer spending, and provides a benchmark for the individual categories. For housing, I use Shelter since it covers housing services, including rent and owners’ equivalent rent.\nThe monthly chart covers January 2019 through December 2025. I use each category’s 2019 annual average as its pre-pandemic baseline, avoiding dependence on one starting month. I calculate cumulative price change as:\n\\[\n100\\left(\\frac{\\text{Index in month }t}{\\text{Average index in 2019}}-1\\right).\n\\]\nIn the All categories tab, readers can also select year-over-year price changes to compare each month with the same month one year earlier. Positive values indicate price increases, while negative values indicate decreases. I include 2018 data so this comparison is available from the start of 2019."
+  },
+  {
+    "objectID": "blog/posts/post7/index.html#explore-the-prices",
+    "href": "blog/posts/post7/index.html#explore-the-prices",
+    "title": "Which Everyday Expenses Have Increased the Most Since 2019?",
+    "section": "Explore the Prices",
+    "text": "Explore the Prices\nStart with All categories to compare cumulative changes since 2019 or year-over-year inflation. Each category has its own tab, with cards showing the latest, highest, and lowest changes relative to 2019. Switch between a monthly line chart and a yearly bar chart. The monthly view uses each month’s index, while the yearly view uses each year’s average. Both are compared with the 2019 annual average. The annual view uses complete years through 2024 because six series lack October 2025. Select a year to explore individual months, hover for values, or drag to zoom.\nTry selecting only gasoline and overall CPI, then switch measures. One shows price changes relative to the 2019 average; the other shows changes relative to the same month a year earlier.\n\n\n\nOpen the interactive chart in a separate tab"
+  },
+  {
+    "objectID": "blog/posts/post7/index.html#what-the-chart-shows",
+    "href": "blog/posts/post7/index.html#what-the-chart-shows",
+    "title": "Which Everyday Expenses Have Increased the Most Since 2019?",
+    "section": "What the Chart Shows",
+    "text": "What the Chart Shows\nElectricity and dining out show the largest increases among the six selected categories. By December 2025, electricity prices were 38.3% above their 2019 average, followed by dining out at 37.1%.\nShelter and groceries also rose more than overall CPI. Their increases of 32.1% and 30.6% exceeded the overall increase of 26.8%. Both staying housed and buying food for home became roughly 30% more expensive than in 2019.\nGasoline prices surged in 2022, then fell substantially from their peak. They reached 85.4% above the 2019 average in June 2022, compared with 12.7% by December 2025. Russia’s invasion of Ukraine contributed to rising crude oil prices and market uncertainty in 2022, according to the U.S. Energy Information Administration. This helps explain the spike. By December 2025, gasoline was 3.4% cheaper than a year earlier, but still above its 2019 average.\nApparel had the smallest endpoint increase, at 3.3%. Selecting apparel alone makes its recurring within-year swings easier to see. The annual view smooths those monthly swings by comparing complete-year averages. Together, the two views distinguish a temporary peak from a sustained increase in the price level."
+  },
+  {
+    "objectID": "blog/posts/post7/index.html#takeaway",
+    "href": "blog/posts/post7/index.html#takeaway",
+    "title": "Which Everyday Expenses Have Increased the Most Since 2019?",
+    "section": "Takeaway",
+    "text": "Takeaway\nFrom 2019 to December 2025, overall consumer prices increased by 26.8%, providing context for the increases across all six categories. Electricity and dining out had the largest price increases among the six categories by December 2025. Food prices deserve particular attention: groceries rose by 30.6% and dining out by 37.1%, both more than overall CPI. These increases matter for everyday budgets because food is a recurring expense."
+  },
+  {
+    "objectID": "blog/posts/post7/index.html#limitations",
+    "href": "blog/posts/post7/index.html#limitations",
+    "title": "Which Everyday Expenses Have Increased the Most Since 2019?",
+    "section": "Limitations",
+    "text": "Limitations\n\nSeasonality: The indexes are not seasonally adjusted, so monthly comparisons include seasonal price movements. Annual averages smooth these fluctuations.\nMissing data: Six series lack October 2025 observations following the federal shutdown. Their monthly lines have a gap, and annual comparisons stop at 2024 to use complete years for every category."
+  },
+  {
+    "objectID": "blog/posts/post7/index.html#data-notes",
+    "href": "blog/posts/post7/index.html#data-notes",
+    "title": "Which Everyday Expenses Have Increased the Most Since 2019?",
+    "section": "Data Notes",
+    "text": "Data Notes\nThe series retain seasonal price movements. Monthly charts show these fluctuations, while annual bars compare full-year averages. Six series lack October 2025 observations following the federal shutdown, so their lines have a gap. Gasoline remains available that month.\nThe analysis code and README provide the data links, calculations, and steps to reproduce the chart."
   }
 ]

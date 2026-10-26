@@ -12,7 +12,7 @@ This repository maintains the blog articles, display images, and Quarto website.
 | Blog 4: Prosperity and longevity | [QMD](blog/posts/post4/index.qmd) | [BLOG4](https://github.com/annzhao-77/BLOG4) |
 | Blog 5: Pennsylvania population and migration | [QMD](blog/posts/post5/index.qmd) | [BLOG5](https://github.com/annzhao-77/BLOG5) |
 | Blog 6: Matching fathers and children with SQL | [QMD](blog/posts/post6/index.qmd) | [BLOG6](https://github.com/annzhao-77/BLOG6) |
-| Blog 7: Everyday expenses since 2019 | Planned; article not yet added | Analysis and replication instructions forthcoming |
+| Blog 7: Everyday expenses since 2019 | [QMD](blog/posts/post7/index.qmd) | [BLOG7](https://github.com/annzhao-77/BLOG7) |
 
 ## Blog 6: Matching Fathers and Children: A SQL Tutorial in Python
 
@@ -26,11 +26,11 @@ See the [analysis script](https://github.com/annzhao-77/BLOG6/blob/main/code/ana
 
 ## Blog 7: Which Everyday Expenses Have Increased the Most Since 2019?
 
-**Status:** Topic agreed; data collection and analysis are pending.
+Inspired by **衣食住行** (clothing, food, housing, and transportation), the post compares six categories using [BLS Consumer Price Index data](https://www.bls.gov/cpi/data.htm) downloaded through FRED. The chart covers January 2019–December 2025, using the **2019 annual average as the pre-pandemic baseline**. It includes apparel, groceries, dining out, shelter, electricity, and gasoline, with overall CPI as a benchmark.
 
-The planned post compares changes in everyday prices using [BLS Consumer Price Index data](https://www.bls.gov/cpi/data.htm). It uses the **2019 annual average as the pre-pandemic baseline**. Candidate categories include food at home, food away from home, shelter, gasoline, and electricity. The final categories and end date will be documented after checking data coverage.
+The interactive Plotly explorer has an All categories comparison tab and a separate, color-themed tab for each series. The comparison switches between cumulative and year-over-year changes. Category tabs show monthly line charts or annual bar charts, both relative to the 2019 annual average. Cards show the latest, highest, and lowest cumulative changes. Annual comparisons stop at 2024 because six series lack October 2025; monthly data extend through December 2025. Electricity and dining out have the largest cumulative endpoint increases among these categories. Shelter and groceries also increased more than overall CPI. The article cites EIA on the role of Russia's invasion of Ukraine in the 2022 oil-price rise, and its takeaway highlights food as a recurring expense. Its limitations cover seasonality and missing observations.
 
-A Plotly time-series figure will let readers select categories and switch between cumulative price changes relative to 2019 and year-over-year inflation. This interaction will help distinguish slower price increases from falling prices and compare categories without crowding a single static chart. Findings will describe observed price changes, rather than attribute all increases to COVID-19. Links to the article, analysis code, and replication instructions will be added when available.
+See the [analysis script](https://github.com/annzhao-77/BLOG7/blob/main/code/analysis.py) and [BLOG7 README](https://github.com/annzhao-77/BLOG7) for the saved data and replication steps. Edit the article in `BLOG7/index.qmd`, including the “What the Chart Shows” section; there is no separate results QMD. Running `python code/analysis.py --website` from BLOG7 reruns the analysis and copies that article and `figures/everyday_prices.html` into this website. It replaces the website's article copy, so make narrative edits in BLOG7 first. The HTML includes Plotly itself, so its interactive controls do not require a CDN. Render the website after copying; the command does not publish it.
 
 ## Repository layout
 
