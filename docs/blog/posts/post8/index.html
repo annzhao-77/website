@@ -230,12 +230,12 @@ window.Quarto = {
 </section>
 <section id="one-sample-of-bottles" class="level2">
 <h2 class="anchored" data-anchor-id="one-sample-of-bottles">One Sample of Bottles</h2>
-<p>Imagine checking a drink labeled 500 mL. We want to estimate its average fill and test whether that average equals the label. I simulate 80 independent bottle fills from a normal distribution with mean 500 mL and standard deviation 10 mL. These are invented measurements, not product data. Knowing the true mean lets us check whether our intervals work.</p>
+<p>Imagine checking a drink labeled 500 mL, we want to estimate its average fill and test whether that average equals the label. I simulate 80 independent bottle fills from a normal distribution with mean 500 mL and standard deviation 10 mL. These are invented measurements, not product data. Knowing the true mean lets us check whether our intervals work.</p>
 <p>I use Python and NumPy for resampling, Matplotlib for the test figure, and browser controls for interaction. A fixed seed makes results reproducible. Our sample mean is <strong>500.19 mL</strong>. Bootstrap estimates the uncertainty around this sample mean.</p>
 </section>
 <section id="build-a-bootstrap-interval" class="level2">
 <h2 class="anchored" data-anchor-id="build-a-bootstrap-interval">1. Build a Bootstrap Interval</h2>
-<p>We draw 80 values <strong>with replacement</strong> from our original sample. A bottle can appear more than once, while another may not appear at all. We calculate the resampled mean and repeat this process 1,000 times:</p>
+<p>We draw 80 values with replacement from our original sample. A bottle can appear more than once, while another may not appear at all. We calculate the resampled mean and repeat this process 1,000 times:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>bootstrap_means <span class="op">=</span> []</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1000</span>):</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    resample <span class="op">=</span> rng.choice(sample, size<span class="op">=</span><span class="dv">80</span>, replace<span class="op">=</span><span class="va">True</span>)</span>
@@ -244,43 +244,47 @@ window.Quarto = {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>lower, upper <span class="op">=</span> np.quantile(bootstrap_means, [<span class="fl">0.025</span>, <span class="fl">0.975</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The histogram shows these means. Following the <a href="https://online.stat.psu.edu/stat200/Lesson04">percentile bootstrap method</a>, we use the 2.5th and 97.5th percentiles as boundaries. These boundaries form a 95% confidence interval for the population mean.</p>
 <p>Choose the repetition count and percentile boundaries below. More repetitions stabilize the histogram without adding original observations. The default percentiles select the middle 95%.</p>
-<iframe src="figures/bootstrap.html" title="Choose bootstrap repetitions and percentile boundaries" style="width:100%;height:670px;border:0;" loading="lazy"></iframe>
-<p><a href="figures/bootstrap.html" target="_blank">Open the bootstrap explorer</a></p>
+<iframe src="results/figures/bootstrap.html" title="Choose bootstrap repetitions and percentile boundaries" style="width:100%;height:670px;border:0;" loading="lazy"></iframe>
+<p><a href="results/figures/bootstrap.html" target="_blank">Open the bootstrap explorer</a></p>
 <p>With 1,000 repetitions, the distribution is roughly bell-shaped and centered near our sample mean of <strong>500.19 mL</strong>. Most resampled means cluster near the center, with fewer farther away. The middle 95% runs from <strong>498.00 to 502.38 mL</strong>.</p>
 </section>
 <section id="does-it-cover-the-truth" class="level2">
 <h2 class="anchored" data-anchor-id="does-it-cover-the-truth">2. Does It Cover the Truth?</h2>
 <p>Now we repeat the whole experiment. Each time, we draw a fresh sample of 80 bottles from the population and construct another bootstrap interval. We repeat this process for <strong>1,000 fresh samples</strong> and count how many intervals contain 500 mL.</p>
 <p>Switch confidence levels using the same samples: higher confidence gives wider intervals and more coverage. The bars count covered and missed intervals. Select a sample below, or click “Show a missed interval” to inspect one example.</p>
-<iframe src="figures/coverage.html" title="Explore 90, 95, and 99 percent confidence intervals" style="width:100%;height:610px;border:0;" loading="lazy"></iframe>
-<p><a href="figures/coverage.html" target="_blank">Open the confidence-level comparison</a></p>
-<p>At 95% confidence, <strong>953 intervals contain 500 mL and 47 miss it</strong>. The observed coverage of <strong>95.3%</strong> is close to the intended 95%. This illustrates the long-run meaning of the confidence level: it describes the performance of the interval method across repeated samples.</p>
+<iframe src="results/figures/coverage.html" title="Explore 90, 95, and 99 percent confidence intervals" style="width:100%;height:610px;border:0;" loading="lazy"></iframe>
+<p><a href="results/figures/coverage.html" target="_blank">Open the confidence-level comparison</a></p>
+<p>At 95% confidence, 953 intervals contain 500 mL and 47 miss it. The observed coverage of 95.3% is close to the intended 95%. This illustrates the long-run meaning of the confidence level: it describes the performance of the interval method across repeated samples.</p>
 </section>
 <section id="demonstrate-hypothesis-testing" class="level2">
 <h2 class="anchored" data-anchor-id="demonstrate-hypothesis-testing">3. Demonstrate Hypothesis Testing</h2>
 <p>We use the same original sample to demonstrate a two-sided hypothesis test. Let <span class="math inline">\(\mu\)</span> be the population mean fill:</p>
 <p><span class="math display">\[H_0: \mu = 500\text{ mL}\]</span></p>
 <p><span class="math display">\[H_1: \mu \ne 500\text{ mL}\]</span></p>
-<p><strong>Build the reference distribution.</strong> Assuming <span class="math inline">\(H_0\)</span> is true, Python draws 10,000 samples of 80 bottles from a normal distribution with mean 500 mL and standard deviation 10 mL. Each sample produces one mean. Their histogram shows how sample means vary even when the population mean stays at 500.</p>
-<p><strong>Set the rejection region.</strong> We choose a 5% significance level. Among these simulated means, about 5% are more than <strong>2.23 mL</strong> away from 500. We reject <span class="math inline">\(H_0\)</span> if our observed mean falls in these outer regions: below <strong>497.77 mL</strong> or above <strong>502.23 mL</strong>. This rule rejects about 5% of samples even when <span class="math inline">\(H_0\)</span> is true.</p>
+<p>Firstly, we build the reference distribution by assuming <span class="math inline">\(H_0\)</span> is true, Python draws 10,000 samples of 80 bottles from a normal distribution with mean 500 mL and standard deviation 10 mL. Each sample produces one mean. Their histogram shows how sample means vary even when the population mean stays at 500.</p>
+<p>Secondly, we need to set the rejection region. We choose a 5% significance level. Among these simulated means, about 5% are more than 2.23 mL away from 500. We reject <span class="math inline">\(H_0\)</span> if our observed mean falls in these outer regions: below 497.77 mL or above 502.23 mL. This rule rejects about 5% of samples even when <span class="math inline">\(H_0\)</span> is true.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/null_distribution.png" class="img-fluid figure-img"></p>
+<p><img src="results/figures/null_distribution.png" class="img-fluid figure-img"></p>
 <figcaption>Orange bars mark the rejection regions, containing about 5% of simulated means under H₀. The dark line marks our observed mean of 500.19 mL.</figcaption>
 </figure>
 </div>
-<p><strong>Calculate the p-value.</strong> Our observed mean is <strong>500.19 mL</strong>, about <strong>0.19 mL</strong> from 500. Of the 10,000 simulated means, <strong>8,688</strong> are at least this far from 500, counting both directions. This gives a simulated p-value of <strong>0.8688</strong>, about 86.9%. A difference this large or larger is common under <span class="math inline">\(H_0\)</span>.</p>
+<p>Then, we calculate the p-value. Our observed mean is 500.19 mL, about 0.19 mL from 500. Of the 10,000 simulated samples, 8,688 have means at least this far from 500 mL. This gives a simulated p-value of 0.8688, about 86.9%. A difference this large or larger is common under <span class="math inline">\(H_0\)</span>.</p>
 <p><strong>p-value = 0.8688 &gt; 0.05: we fail to reject <span class="math inline">\(H_0\)</span>.</strong></p>
-<p>The observed mean also lies outside the orange rejection regions. Both comparisons lead to the same conclusion: this sample does not provide enough evidence that the population mean differs from 500 mL. The 5% sets the rejection rule; the p-value is calculated from our observed difference.</p>
+<p>The observed mean also lies outside the orange rejection regions. Both comparisons lead to the same conclusion: at the 5% significance level, this sample does not provide enough evidence that the population mean differs from 500 mL.</p>
 </section>
 <section id="takeaway" class="level2">
 <h2 class="anchored" data-anchor-id="takeaway">Takeaway</h2>
-<p>Bootstrap turns one sample into an estimate of uncertainty. Repeated population sampling shows what the confidence level means in practice. Hypothesis testing compares an observed statistic with the distribution generated under the null hypothesis.</p>
+<p>Bootstrap gave us a 95% confidence interval from one sample. We can say that we are 95% confident that the population mean lies between 498.00 and 502.38 mL. his confidence comes from the method: across repeated samples, about 95% of its intervals should contain the true mean. Our simulation achieved 95.3% coverage.</p>
+<p>The interval included 500 mL. The hypothesis test also failed to reject a mean of 500 mL. The confidence interval shows uncertainty around our estimate of the population mean.The test evaluates one specific mean. Both results are consistent with 500 mL.</p>
 </section>
-<section id="limitations" class="level2">
-<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
-<p>The example assumes independent, normally distributed fills and a known standard deviation for the null simulation. Bootstrap coverage can differ with small or strongly skewed samples. Resampling also cannot repair an unrepresentative original sample.</p>
-<p>The <a href="https://github.com/annzhao-77/BLOG8/blob/main/code/analysis.py">code</a> and <a href="https://github.com/annzhao-77/BLOG8">README</a> explain how to reproduce the figures.</p>
+<section id="limitations-in-practice" class="level2">
+<h2 class="anchored" data-anchor-id="limitations-in-practice">Limitations in Practice</h2>
+<ul>
+<li><strong>Sample quality:</strong> Bootstrap reuses the observed data. It cannot correct a biased sample or recover information missing from it.</li>
+<li><strong>Independent observations:</strong> Our resampling treats each bottle as independent. If bottles from the same production batch are related, we would need a method that preserves that relationship.</li>
+<li><strong>Known variability:</strong> Our hypothesis test assumes the population standard deviation is known. In practice, it usually needs to be estimated from the sample.</li>
+</ul>
 
 
 </section>
