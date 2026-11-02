@@ -13,6 +13,7 @@ This repository maintains the blog articles, display images, and Quarto website.
 | Blog 5: Pennsylvania population and migration | [QMD](blog/posts/post5/index.qmd) | [BLOG5](https://github.com/annzhao-77/BLOG5) |
 | Blog 6: Matching fathers and children with SQL | [QMD](blog/posts/post6/index.qmd) | [BLOG6](https://github.com/annzhao-77/BLOG6) |
 | Blog 7: Everyday expenses since 2019 | [QMD](blog/posts/post7/index.qmd) | [BLOG7](https://github.com/annzhao-77/BLOG7) |
+| Blog 8: Bootstrap and statistical inference | [QMD](blog/posts/post8/index.qmd) | [BLOG8](https://github.com/annzhao-77/BLOG8) |
 
 ## Blog 6: Matching Fathers and Children: A SQL Tutorial in Python
 
@@ -31,6 +32,14 @@ Inspired by **衣食住行** (clothing, food, housing, and transportation), the 
 The interactive Plotly explorer has an All categories comparison tab and a separate, color-themed tab for each series. The comparison switches between cumulative and year-over-year changes. Category tabs show monthly line charts or annual bar charts, both relative to the 2019 annual average. Cards show the latest, highest, and lowest cumulative changes. Annual comparisons stop at 2024 because six series lack October 2025; monthly data extend through December 2025. Electricity and dining out have the largest cumulative endpoint increases among these categories. Shelter and groceries also increased more than overall CPI. The article cites EIA on the role of Russia's invasion of Ukraine in the 2022 oil-price rise, and its takeaway highlights food as a recurring expense. Its limitations cover seasonality and missing observations.
 
 See the [analysis script](https://github.com/annzhao-77/BLOG7/blob/main/code/analysis.py) and [BLOG7 README](https://github.com/annzhao-77/BLOG7) for the saved data and replication steps. Edit the article in `BLOG7/index.qmd`, including the “What the Chart Shows” section; there is no separate results QMD. Running `python code/analysis.py --website` from BLOG7 reruns the analysis and copies that article and `figures/everyday_prices.html` into this website. It replaces the website's article copy, so make narrative edits in BLOG7 first. The HTML includes Plotly itself, so its interactive controls do not require a CDN. Render the website after copying; the command does not publish it.
+
+## Blog 8: What Does 95% Confidence Really Mean?
+
+The tutorial uses simulated bottle fills to explain percentile bootstrap intervals, repeated-sample coverage, and a two-sided hypothesis test. Basic Python loops resample one sample, repeat the full sampling experiment 1,000 times, and generate 10,000 samples under a 500 mL null mean. The true simulated mean is 500 mL, with standard deviation 10 mL and 80 bottles per sample.
+
+Three displays show the bootstrap distribution, confidence-interval coverage, and the null distribution with rejection boundaries and shaded 5% rejection regions. The first interactive histogram lets readers select repetition counts and percentile boundaries. The second counts covered and missed intervals at 90%, 95%, and 99% confidence, with a slider to inspect individual intervals. The 95% intervals cover the truth in 95.3% of experiments. The article explains the 95% interpretation and reports the simulated p-value of 0.8688.
+
+See [BLOG8](https://github.com/annzhao-77/BLOG8) for the code, generated data, results, and README. Run `python code/analysis.py --website` from BLOG8 to copy the article and figures, then `quarto render blog/posts/post8/index.qmd` from this repository. Keep `bootstrap.html` and `coverage.html` in `blog/posts/post8/figures/`; both interactive pages contain their data and work offline. Edit the narrative in BLOG8's `index.qmd` before syncing. The website renders saved simulation results and does not run Python.
 
 ## Repository layout
 
