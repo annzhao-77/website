@@ -14,6 +14,7 @@ This repository maintains the blog articles, display images, and Quarto website.
 | Blog 6: Matching fathers and children with SQL | [QMD](blog/posts/post6/index.qmd) | [BLOG6](https://github.com/annzhao-77/BLOG6) |
 | Blog 7: Everyday expenses since 2019 | [QMD](blog/posts/post7/index.qmd) | [BLOG7](https://github.com/annzhao-77/BLOG7) |
 | Blog 8: Bootstrap and statistical inference | [QMD](blog/posts/post8/index.qmd) | [BLOG8](https://github.com/annzhao-77/BLOG8) |
+| Blog 9: Updating stock forecasts | [QMD](blog/posts/post9/index.qmd) | [BLOG9](https://github.com/annzhao-77/BLOG9) |
 
 ## Blog 6: Matching Fathers and Children: A SQL Tutorial in Python
 
@@ -40,6 +41,12 @@ The tutorial uses simulated bottle fills to explain percentile bootstrap interva
 Three displays show the bootstrap distribution, confidence-interval coverage, and the null distribution with rejection boundaries and shaded 5% rejection regions. The first interactive histogram lets readers select repetition counts and percentile boundaries. The second counts covered and missed intervals at 90%, 95%, and 99% confidence, with a slider to inspect individual intervals. The 95% intervals cover the truth in 95.3% of experiments. The article explains the 95% interpretation and reports the simulated p-value of 0.8688.
 
 See [BLOG8](https://github.com/annzhao-77/BLOG8) for the code, generated data, results, and README. Run `python code/analysis.py --website` from BLOG8 to copy the article and figures, then `quarto render blog/posts/post8/index.qmd` from this repository. Keep `bootstrap.html` and `coverage.html` in `blog/posts/post8/figures/`; both interactive pages contain their data and work offline. Edit the narrative in BLOG8's `index.qmd` before syncing. The website renders saved simulation results and does not run Python.
+
+## Blog 9: Does Updating a Stock Model Every Month Improve Its Picks?
+
+The post compares the classroom XGBoost model, monthly retraining, and a historical-average forecast for 95 stocks over 34 holding periods from January 2024 through October 2026. Monthly retraining lowered mean absolute forecast error from 6.71 to 6.66 percentage points. Its portfolio averaged 2.08% per period before costs, compared with 2.77% for the classroom model and 3.12% for the historical-average strategy.
+
+To update the post, copy `index.qmd`, `results/_table.md`, and `results/portfolio.png` from BLOG9 to `blog/posts/post9/`, preserving the folder structure. The [BLOG9 README](https://github.com/annzhao-77/BLOG9/blob/main/README.md) explains how to regenerate the results.
 
 ## Repository layout
 
